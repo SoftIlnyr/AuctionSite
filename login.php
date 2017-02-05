@@ -7,7 +7,11 @@
  * Time: 17:45
  */
 
-session_start();
+require_once "includes/session_check.php";
+if (isset($user)) {
+    header("Location: hello.php");
+    exit();
+}
 ?>
 
 <h2>Login</h2>

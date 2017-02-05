@@ -29,8 +29,8 @@ if ($_POST["username"]) {
             $password = htmlspecialchars($password);
             $password = trim($password);
             if (password_verify($password, $user["password"])) {
-                $_SESSION['login'] = $username;
                 $_SESSION['id'] = $user['id'];
+                $_SESSION['password'] = $user["password"];
                 header("Location: ../hello.php");
             } else {
                 echo "Неправильный пароль";
