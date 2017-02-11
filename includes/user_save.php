@@ -86,10 +86,9 @@ if (sizeof($req_info) == 4) {
     print_r($query);
     $query->execute();
     $query->close();
-    print_r($req_info);
-//    header("Location: ../registration.php");
-//    exit();
+    header("Location: ../login.php");
+    exit();
 }
 
-//header("Location: ../registration.php");
-//exit();
+header("Location: ../registration.php");
+exit();

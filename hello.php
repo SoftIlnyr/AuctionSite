@@ -25,7 +25,9 @@ include_once "includes/user_scope.php"
     <p>Hello, <?= $user["username"] ?></p>
     <p><a href="includes/user_logout.php">Logout</a></p>
     <p><a href="scope_add.php">Add a scope</a></p>
-    <?php if ($scopes): ?>
+    <?php if (isset($scopes)): ?>
+        <p><a href="auction_add.php">Add an auction</a></p>
+        <p><a href="auction_list.php">Search auctions</a></p>
         <?php foreach ($scopes as $scope):?>
             <h3><?=$scope['scope_name']?></h3>
             <p>Experience: <?=$scope['experience']?></p>
