@@ -1,0 +1,6 @@
+RewriteEngine on
+
+RewriteRule ^home$ hello.php [L]
+RewriteRule ^users/([0-9]+)$ user_profile.php?user_id=$1
+RewriteRule ^auctions$ auction_list.php
+RewriteRule ^auctions/([0-9]+)$ auction_page.php?auction_id=$1

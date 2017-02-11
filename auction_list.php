@@ -39,14 +39,10 @@ if (isset($user)) {
 
 <?php if (isset($auctions)): ?>
     <?php foreach ($auctions as $auction): ?>
-        <h3><?= $auction['scope_name'] ?></h3>
+        <h3><a href="/auctions/<?=$auction['id']?>"><?= $auction['scope_name'] ?></a></h3>
         <p>Date: from <?= $auction['date_beg'] ?> to <?= $auction['date_end']; ?></p>
         <p>Price: from <?= $auction['price_beg'] ?> to <?= $auction['price_end']; ?></p>
     <?php endforeach; ?>
-
-<?php else: ?>
-    <p>Hello, guest</p>
-    <p><a href="login.php">Login</a></p>
 <?php endif; ?>
 
 </body>
