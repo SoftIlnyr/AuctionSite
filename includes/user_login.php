@@ -12,12 +12,12 @@ require_once "connection.php";
 
 $login_info = array();
 
-if ($_POST["username"]) {
-    $username = $_POST["username"];
-    $username = htmlspecialchars($username);
-    $username = trim($username);
-    $stmt = $mysqli->prepare("select * from users where username=?");
-    $stmt->bind_param('s', $username);
+if ($_POST["email"]) {
+    $email = $_POST["email"];
+    $email = htmlspecialchars($email);
+    $email = trim($email);
+    $stmt = $mysqli->prepare("select * from users where email=?");
+    $stmt->bind_param('s', $email);
     $stmt->execute();
     $result = $stmt->get_result();
     $user = $result->fetch_array();

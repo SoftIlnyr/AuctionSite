@@ -8,6 +8,7 @@
  */
 
 include_once "includes/session_check.php";
+include_once "includes/user_scope.php"
 ?>
 
 <!doctype html>
@@ -20,10 +21,18 @@ include_once "includes/session_check.php";
     <title>Hello</title>
 </head>
 <body>
-<?php if (isset($user)):?>
+<?php if (isset($user)): ?>
     <p>Hello, <?= $user["username"] ?></p>
     <p><a href="includes/user_logout.php">Logout</a></p>
-<?php else:?>
+    <p><a href="scope_add.php">Add a scope</a></p>
+    <?php if ($scopes): ?>
+        <?php foreach ($scopes as $scope):?>
+            <h3><?=$scope['scope_name']?></h3>
+            <p>Experience: <?=$scope['experience']?></p>
+        <?php endforeach;?>
+
+    <?php endif; ?>
+<?php else: ?>
     <p>Hello, guest</p>
     <p><a href="login.php">Login</a></p>
 <?php endif; ?>

@@ -6,27 +6,6 @@
  * Time: 16:51
  */
 
-//if (isset($_POST["username"])) {
-//    $req_info = array();
-//    $req_info["username"] = $_POST["username"];
-//    $req_info["password"] = $_POST["password"];
-//    $req_info["password_conf"] = $_POST["password_conf"];
-//    $req_info["email"] = $_POST["email"];
-//    $req_info["phone"] = $_POST["phone"];
-//
-//    print_r($req_info);
-//
-//
-//
-//    require_once("includes/constants.php");
-//    $mysqli = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
-//    $query = $mysqli->prepare("insert into users(username, password, email, phone) VALUES (?, ?, ?, ?);");
-//    print_r($query);
-//    $query->bind_param('ssss', $req_info["username"], $req_info["password"], $req_info["email"], $req_info["phone"]);
-//    print_r($query);
-//    $query->execute();
-//    echo "Пользователь добавлен!";
-//}
 require_once "connection.php";
 
 $req_info = array();

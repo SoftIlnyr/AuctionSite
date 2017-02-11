@@ -17,7 +17,7 @@ if (isset($user)) {
 <h2>Login</h2>
 <form action="includes/user_login.php" method="post">
     <label for="username">
-        <p>Username: <input type="text" name="username"/></p>
+        <p>Email: <input type="text" name="email"/></p>
     </label>
 
     <label for="password">
