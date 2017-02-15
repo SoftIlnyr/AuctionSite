@@ -31,7 +31,7 @@ if ($_POST["email"]) {
             if (password_verify($password, $user["password"])) {
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['password'] = $user["password"];
-                header("Location: ../hello.php");
+                header("Location: /home");
             } else {
                 echo "Неправильный пароль";
             }

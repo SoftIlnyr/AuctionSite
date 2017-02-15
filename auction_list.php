@@ -10,7 +10,7 @@ include_once "includes/session_check.php";
 //include_once "includes/user_scope.php"
 
 if (isset($user)) {
-    $stmt = $mysqli->prepare("select * from auction");
+    $stmt = $mysqli->prepare("select * from auctions");
     $stmt->execute();
     $result = $stmt->get_result();
     foreach ($result as $res) {
@@ -39,9 +39,10 @@ if (isset($user)) {
 
 <?php if (isset($auctions)): ?>
     <?php foreach ($auctions as $auction): ?>
-        <h3><a href="/auctions/<?=$auction['id']?>"><?= $auction['scope_name'] ?></a></h3>
+        <h3><a href="/auctions/<?= $auction['id'] ?>"><?= $auction['scope_name'] ?></a></h3>
         <p>Date: from <?= $auction['date_beg'] ?> to <?= $auction['date_end']; ?></p>
         <p>Price: from <?= $auction['price_beg'] ?> to <?= $auction['price_end']; ?></p>
+
     <?php endforeach; ?>
 <?php endif; ?>
 

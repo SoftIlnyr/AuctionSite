@@ -65,7 +65,7 @@ if (isset($user)) {
             $auction_info["price_beg"], $auction_info["price_end"], $auction_info["description"]);
         $query->execute();
         $query->close();
-        header("Location: ../hello.php");
+        header("Location: /home");
         exit();
     }
 }

@@ -35,7 +35,7 @@ if (isset($user)) {
         $query->bind_param('isis', $user['id'], $scope_info["scope_name"], $scope_info["experience"], $scope_info["description"]);
         $query->execute();
         $query->close();
-        header("Location: ../hello.php");
+        header("Location: /home");
         exit();
     }
 

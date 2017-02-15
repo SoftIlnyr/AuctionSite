@@ -8,7 +8,8 @@
  */
 
 include_once "includes/session_check.php";
-include_once "includes/user_scope.php"
+include_once "includes/user_scope.php";
+include_once "includes/user_auction.php";
 ?>
 
 <!doctype html>
@@ -27,11 +28,21 @@ include_once "includes/user_scope.php"
     <p><a href="scope_add.php">Add a scope</a></p>
     <?php if (isset($scopes)): ?>
         <p><a href="auction_add.php">Add an auction</a></p>
-        <p><a href="auction_list.php">Search auctions</a></p>
-        <?php foreach ($scopes as $scope):?>
-            <h3><?=$scope['scope_name']?></h3>
-            <p>Experience: <?=$scope['experience']?></p>
-        <?php endforeach;?>
+        <p><a href="/auctions">Search auctions</a></p>
+        <?php foreach ($scopes as $scope): ?>
+            <h3><?= $scope['scope_name'] ?></h3>
+            <p>Experience: <?= $scope['experience'] ?></p>
+        <?php endforeach; ?>
+
+        <?php if (isset($auctions)): ?>
+            <?php foreach ($auctions as $auction): ?>
+                <h2><?= $auction['scope_name'] ?></h2>
+
+                <p>Date: from <?= $auction['date_beg'] ?> to <?= $auction['date_end']; ?></p>
+                <p>Price: from <?= $auction['price_beg'] ?> to <?= $auction['price_end']; ?></p>
+                <p>Description: <?= $auction['description']; ?></p>
+            <?php endforeach; ?>
+        <?php endif; ?>
 
     <?php endif; ?>
 <?php else: ?>
