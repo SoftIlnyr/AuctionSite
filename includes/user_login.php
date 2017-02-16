@@ -5,7 +5,6 @@
  * Date: 04.02.2017
  * Time: 17:49
  */
-
 session_start();
 
 require_once "connection.php";

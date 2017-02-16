@@ -9,7 +9,7 @@
 
 require_once "includes/session_check.php";
 if (isset($user)) {
-    header("Location: /hello");
+    header("Location: /home");
     exit();
 }
 ?>
@@ -28,4 +28,4 @@ if (isset($user)) {
     </label>
 
 </form>
-<p><a href="registration.php">Registration</a></p>
+<p><a href="/signup">Registration</a></p>

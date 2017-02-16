@@ -47,7 +47,7 @@ include_once "includes/user_auction.php";
     <?php endif; ?>
 <?php else: ?>
     <p>Hello, guest</p>
-    <p><a href="login.php">Login</a></p>
+    <p><a href="/signin">Sign In</a></p>
 <?php endif; ?>
 
 </body>

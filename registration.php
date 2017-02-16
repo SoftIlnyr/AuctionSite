@@ -9,7 +9,7 @@
 
 require_once "includes/session_check.php";
 if (isset($user)) {
-    header("Location: hello.php");
+    header("Location: /home");
     exit();
 }
 ?>
@@ -41,4 +41,4 @@ if (isset($user)) {
     </label>
 
 </form>
-<p><a href="login.php">Login</a></p>
+<p><a href="/signin">Login</a></p>

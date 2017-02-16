@@ -12,6 +12,6 @@ if (isset($user)) {
     unset($_SESSION["password"]);
     unset($_SESSION["login"]);
     unset($user);
-    header("Location: /login");
+    header("Location: /signin");
     exit();
 }

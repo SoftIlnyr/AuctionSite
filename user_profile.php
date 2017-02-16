@@ -9,7 +9,7 @@
 include_once "includes/session_check.php";
 
 if (!isset($user)) {
-    header("Location: login.php");
+    header("Location: /signin");
     exit();
 } else {
     if (isset($_GET["user_id"])) {

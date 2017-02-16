@@ -8,6 +8,11 @@
 
 
 require_once "includes/session_check.php";
+
+if (!isset($user)) {
+    header("Location: /signin");
+    exit();
+}
 ?>
 
 <h2>New Scope</h2>
@@ -28,4 +33,3 @@ require_once "includes/session_check.php";
     </label>
 
 </form>
-<p><a href="login.php">Login</a></p>
